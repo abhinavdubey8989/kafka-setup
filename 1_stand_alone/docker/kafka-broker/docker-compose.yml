@@ -1,0 +1,19 @@
+version: '3.1'
+services: 
+  kafka:
+    image: 'confluentinc/cp-kafka'
+    hostname: my_kafka_1
+    container_name: my_kafka_1
+    ports:
+      - 9092:9092
+    environment:
+     - KAFKA_ZOOKEEPER_CONNECT=my_zoo_1:2181
+     - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+     - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
+
+
+networks:
+  default:
+    name: mynet1
+    external: true
+

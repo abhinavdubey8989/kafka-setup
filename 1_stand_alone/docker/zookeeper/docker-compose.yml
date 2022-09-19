@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  my_zoo_1:
+    image: zookeeper
+    restart: always
+    hostname: my_zoo_1
+    container_name: my_zoo_1
+    ports:
+      - 2181:2181
+
+networks:
+  default:
+    name: mynet1
+    external: true
+
+
