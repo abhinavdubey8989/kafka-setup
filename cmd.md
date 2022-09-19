@@ -69,7 +69,6 @@ b-1-public.kafkabroker3.8giqir.c4.kafka.ap-south-1.amazonaws.com:9196,b-2-public
 
 # install npm & node
 
-
 # local node app + MSK
 - turn on SASL in cluster
 - make changes in producer
